@@ -1,0 +1,37 @@
+{
+  "name": "@yonchando/file-upload-preview",
+  "version": "1.0.0",
+  "description": "File Upload Preview",
+  "main": "dist/js/file_upload_preview.js",
+  "scripts": {
+    "dev": "npx mix watch -- --watch-options-poll=1000",
+    "prod": "npx mix --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yonchando/file-uploader-preview.git"
+  },
+  "keywords": [
+    "file upload",
+    "jquery",
+    "javascript",
+    "file upload preview"
+  ],
+  "author": "Yon Chando",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/yonchando/file-uploader-preview/issues"
+  },
+  "homepage": "https://github.com/yonchando/carouseljs#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "laravel-mix": "^6.0.49",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "jquery": "^3.6.4"
+  }
+}
