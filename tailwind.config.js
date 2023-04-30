@@ -4,7 +4,7 @@ module.exports = {
         './src/**/*.ts',
         './public/*.html'
     ],
-    prefix: '',
+    prefix: 'file-upload-preview',
     theme: {
         extend: {},
     },
