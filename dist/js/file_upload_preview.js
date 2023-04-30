@@ -144,8 +144,8 @@ var Options = /*#__PURE__*/function () {
     this.defaultImage = options.defaultImage;
   }
   _createClass(Options, [{
-    key: "default",
-    value: function _default(plugin) {
+    key: "defaultContentPreview",
+    value: function defaultContentPreview(plugin) {
       if (this.previewContent === undefined) {
         this.previewContent = $("<div>");
         plugin.after(this.previewContent);
@@ -189,9 +189,10 @@ $.fn["fileUploader"] = function (options) {
   return $.each(this, function () {
     var plugin = $(this);
     var dataAttribute = $(plugin).data();
-    var settings = $.extend(options, dataAttribute);
+    var settings = {};
+    $.extend(settings, options, dataAttribute);
     var option = new _classes_options__WEBPACK_IMPORTED_MODULE_0__.Options(settings);
-    option["default"](plugin);
+    option.defaultContentPreview(plugin);
     if (!option.noStyle) {
       new _classes_InputFile__WEBPACK_IMPORTED_MODULE_2__.InputFile().initialStyle(plugin);
     }

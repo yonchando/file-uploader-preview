@@ -16,7 +16,7 @@ export class Options {
         this.defaultImage = options.defaultImage;
     }
     
-    default(plugin) {
+    defaultContentPreview(plugin) {
         if (this.previewContent === undefined) {
             this.previewContent = $(`<div>`);
             plugin.after(this.previewContent);

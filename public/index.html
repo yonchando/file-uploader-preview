@@ -19,16 +19,25 @@
 
         <div class="justify-center items-center">
 
-            <div class="mb-4">
-                <input type="file"
-                       name=""
-                       multiple
-                       data-preview-content="#image"
-                       class="file-uploader" id="2">
+            <div class="w-1/2">
+                <div class="mb-4">
+                    <input type="file"
+                           name=""
+                           multiple
+                           data-preview-content="#image"
+                           data-default-image="assets/user.png"
+                           class="file-uploader" id="2">
+                    <div id="image" class="mt-4">
+                    </div>
+                </div>
+                <div class="">
+                    <input type="file"
+                           name=""
+                           multiple
+                           class="file-uploader" id="1">
+                </div>
             </div>
             
-            <div id="image" class="">
-            </div>
         </div>
         
         <script src="../node_modules/jquery/dist/jquery.min.js"></script>
