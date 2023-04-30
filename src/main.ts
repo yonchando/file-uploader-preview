@@ -10,18 +10,20 @@ $.fn["fileUploader"] = function (options) {
         const dataAttribute = $(plugin).data();
 
         const settings = $.extend(options, dataAttribute);
-        
+
         const option: Options = new Options(settings);
-        
+
         option.default(plugin);
-        
-        if(!option.noStyle){
+
+        if (!option.noStyle) {
             new InputFile().initialStyle(plugin);
         }
 
         plugin.on('change', function (): void {
             const files: FileList = this.files;
-            new FileRender().toHtml(option,files);
+            new FileRender().toHtml(option, files);
         });
+
+        new FileRender().renderDefaultImage(option);
     });
 }
