@@ -1,6 +1,6 @@
 {
   "name": "@yonchando/file-upload-preview",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "File Upload Preview",
   "main": "dist/js/file_upload_preview.js",
   "scripts": {
