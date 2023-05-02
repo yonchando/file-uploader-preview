@@ -20,11 +20,12 @@ $.fn["fileUploader"] = function (options) {
         if (!option.noStyle) {
             new InputFile().initialStyle(plugin);
         }
+        
+        new FileRender().renderDefaultImage(option);
 
         plugin.on('change', function (): void {
             const files: FileList = this.files;
             new FileRender().toHtml(option, files);
         });
-        new FileRender().renderDefaultImage(option);
     });
 }

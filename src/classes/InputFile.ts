@@ -1,37 +1,47 @@
-import {PREFIX_ClASS} from "../config";
-
 export class InputFile {
     initialStyle(input) {
-        const wrap = $(`<div>`, {
-            class: this.addClass('relative w-full'.split(' '))
-        });
+        const wrap = $(`<div>`).addClass([
+            'file-upload-preview-relative',
+            'file-upload-preview-w-full',
+        ])
 
-        input.addClass(`${PREFIX_ClASS}opacity-0 ${PREFIX_ClASS}absolute ${PREFIX_ClASS}inset-0 ${PREFIX_ClASS}w-full ${PREFIX_ClASS}h-full ${PREFIX_ClASS}rounded-lg ${PREFIX_ClASS}cursor-pointer`)
+        input.addClass([
+            'file-upload-preview-opacity-0',
+            'file-upload-preview-absolute',
+            'file-upload-preview-inset-0',
+            'file-upload-preview-w-full',
+            'file-upload-preview-h-full',
+            'file-upload-preview-rounded-lg',
+            'file-upload-preview-cursor-pointer'
+        ]);
         input.wrap(wrap);
 
-        const flex = $(`<div>`, {
-            class: this.addClass([
-                'flex'
-            ]),
-        });
-        input.before(flex);
+        const flexForm = $(`<div>`).addClass([
+            'file-upload-preview-flex',
+            'file-upload-preview-items-center',
+        ]);
+        input.before(flexForm);
 
-        const span = $('<span>', {
-            class: this.addClass(
-                'block w-3/4 border border-gray-300 border-solid rounded-l-lg px-4 py-2 text-sm'.split(' '),
-            ),
-            text: 'Upload file',
-        }).appendTo(flex);
+        $('<span>').addClass([
+            'file-upload-preview-block',
+            'file-upload-preview-w-3/4',
+            'file-upload-preview-border',
+            'file-upload-preview-border-gray-300',
+            'file-upload-preview-border-solid',
+            'file-upload-preview-rounded-l-lg',
+            'file-upload-preview-px-4',
+            'file-upload-preview-py-2',
+            'file-upload-preview-text-sm',
+        ]).text('Upload file').appendTo(flexForm);
 
-        const button = $(`<button>`, {
-            class: this.addClass('border border-gray-300 border-solid rounded-r-lg px-4 py-2 text-sm'.split(' ')),
-            text: 'Upload',
-        }).appendTo(flex);
-    }
-
-    private addClass(classes: string[]) {
-        return classes.map((value) => {
-            return `${PREFIX_ClASS}${value}`;
-        }).join(' ');
+        $(`<button>`).addClass([
+            'file-upload-preview-border',
+            'file-upload-preview-border-gray-300',
+            'file-upload-preview-border-solid',
+            'file-upload-preview-rounded-r-lg',
+            'file-upload-preview-px-4',
+            'file-upload-preview-py-2',
+            'file-upload-preview-text-sm'
+        ]).text('Upload').appendTo(flexForm);
     }
 }

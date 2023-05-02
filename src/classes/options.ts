@@ -1,5 +1,3 @@
-import {PREFIX_ClASS} from "../config";
-
 export class Options {
     
     public imgClass?: string;
@@ -9,9 +7,9 @@ export class Options {
     public defaultImage: string|string[];
     
     constructor(options) {
-        this.imgClass = options.imgClass ?? `${PREFIX_ClASS}w-full`;
+        this.imgClass = options.imgClass ?? `file-upload-preview-w-full`;
         this.previewContent = options.previewContent ?? undefined;
-        this.previewContentClass = options.previewContentClass ?? `${PREFIX_ClASS}flex ${PREFIX_ClASS}gap-4`;
+        this.previewContentClass = options.previewContentClass ?? `file-upload-preview-flex file-upload-preview-gap-4`;
         this.noStyle = options.noStyle ?? false;
         this.defaultImage = options.defaultImage;
     }

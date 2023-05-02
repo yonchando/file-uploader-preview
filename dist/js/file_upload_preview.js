@@ -69,14 +69,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "InputFile": () => (/* binding */ InputFile)
 /* harmony export */ });
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../config */ "./src/config.ts");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-
 var InputFile = /*#__PURE__*/function () {
   function InputFile() {
     _classCallCheck(this, InputFile);
@@ -84,30 +82,13 @@ var InputFile = /*#__PURE__*/function () {
   _createClass(InputFile, [{
     key: "initialStyle",
     value: function initialStyle(input) {
-      var wrap = $("<div>", {
-        "class": this.addClass('relative w-full'.split(' '))
-      });
-      input.addClass("".concat(_config__WEBPACK_IMPORTED_MODULE_0__.PREFIX_ClASS, "opacity-0 ").concat(_config__WEBPACK_IMPORTED_MODULE_0__.PREFIX_ClASS, "absolute ").concat(_config__WEBPACK_IMPORTED_MODULE_0__.PREFIX_ClASS, "inset-0 ").concat(_config__WEBPACK_IMPORTED_MODULE_0__.PREFIX_ClASS, "w-full ").concat(_config__WEBPACK_IMPORTED_MODULE_0__.PREFIX_ClASS, "h-full ").concat(_config__WEBPACK_IMPORTED_MODULE_0__.PREFIX_ClASS, "rounded-lg ").concat(_config__WEBPACK_IMPORTED_MODULE_0__.PREFIX_ClASS, "cursor-pointer"));
+      var wrap = $("<div>").addClass(['file-upload-preview-relative', 'file-upload-preview-w-full']);
+      input.addClass(['file-upload-preview-opacity-0', 'file-upload-preview-absolute', 'file-upload-preview-inset-0', 'file-upload-preview-w-full', 'file-upload-preview-h-full', 'file-upload-preview-rounded-lg', 'file-upload-preview-cursor-pointer']);
       input.wrap(wrap);
-      var flex = $("<div>", {
-        "class": this.addClass(['flex'])
-      });
-      input.before(flex);
-      var span = $('<span>', {
-        "class": this.addClass('block w-3/4 border border-gray-300 border-solid rounded-l-lg px-4 py-2 text-sm'.split(' ')),
-        text: 'Upload file'
-      }).appendTo(flex);
-      var button = $("<button>", {
-        "class": this.addClass('border border-gray-300 border-solid rounded-r-lg px-4 py-2 text-sm'.split(' ')),
-        text: 'Upload'
-      }).appendTo(flex);
-    }
-  }, {
-    key: "addClass",
-    value: function addClass(classes) {
-      return classes.map(function (value) {
-        return "".concat(_config__WEBPACK_IMPORTED_MODULE_0__.PREFIX_ClASS).concat(value);
-      }).join(' ');
+      var flexForm = $("<div>").addClass(['file-upload-preview-flex', 'file-upload-preview-items-center']);
+      input.before(flexForm);
+      $('<span>').addClass(['file-upload-preview-block', 'file-upload-preview-w-3/4', 'file-upload-preview-border', 'file-upload-preview-border-gray-300', 'file-upload-preview-border-solid', 'file-upload-preview-rounded-l-lg', 'file-upload-preview-px-4', 'file-upload-preview-py-2', 'file-upload-preview-text-sm']).text('Upload file').appendTo(flexForm);
+      $("<button>").addClass(['file-upload-preview-border', 'file-upload-preview-border-gray-300', 'file-upload-preview-border-solid', 'file-upload-preview-rounded-r-lg', 'file-upload-preview-px-4', 'file-upload-preview-py-2', 'file-upload-preview-text-sm']).text('Upload').appendTo(flexForm);
     }
   }]);
   return InputFile;
@@ -125,21 +106,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Options": () => (/* binding */ Options)
 /* harmony export */ });
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../config */ "./src/config.ts");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-
 var Options = /*#__PURE__*/function () {
   function Options(options) {
     _classCallCheck(this, Options);
     var _a, _b, _c, _d;
-    this.imgClass = (_a = options.imgClass) !== null && _a !== void 0 ? _a : "".concat(_config__WEBPACK_IMPORTED_MODULE_0__.PREFIX_ClASS, "w-full");
+    this.imgClass = (_a = options.imgClass) !== null && _a !== void 0 ? _a : "file-upload-preview-w-full";
     this.previewContent = (_b = options.previewContent) !== null && _b !== void 0 ? _b : undefined;
-    this.previewContentClass = (_c = options.previewContentClass) !== null && _c !== void 0 ? _c : "".concat(_config__WEBPACK_IMPORTED_MODULE_0__.PREFIX_ClASS, "flex ").concat(_config__WEBPACK_IMPORTED_MODULE_0__.PREFIX_ClASS, "gap-4");
+    this.previewContentClass = (_c = options.previewContentClass) !== null && _c !== void 0 ? _c : "file-upload-preview-flex file-upload-preview-gap-4";
     this.noStyle = (_d = options.noStyle) !== null && _d !== void 0 ? _d : false;
     this.defaultImage = options.defaultImage;
   }
@@ -155,20 +134,6 @@ var Options = /*#__PURE__*/function () {
   }]);
   return Options;
 }();
-
-/***/ }),
-
-/***/ "./src/config.ts":
-/*!***********************!*\
-  !*** ./src/config.ts ***!
-  \***********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "PREFIX_ClASS": () => (/* binding */ PREFIX_ClASS)
-/* harmony export */ });
-var PREFIX_ClASS = '';
 
 /***/ }),
 
