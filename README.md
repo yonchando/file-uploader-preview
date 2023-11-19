@@ -4,7 +4,7 @@ Input file to has preview file before uploader.
 
 ## Installation
 
-Required JQuery
+Require: JQuery
 
 `npm i --save @yonchando/file-upload-preview`
 
